@@ -18,4 +18,4 @@ iphone:
 wp:
   productid: '87d73c50-a7c3-012e-6f32-64b9e8c10d76'
 
-extensions: ["json", "another-extension"]
+extensions: ["json", "fileutils", "mspec"]

@@ -31,7 +31,7 @@ class SettingsController < Rho::RhoController
         @msg = Rho::RhoError.new(errCode).message
       end
       
-      WebView.navigate ( url_for :action => :login, :query => {:msg => @msg} )
+      WebView.navigate( url_for :action => :login, :query => {:msg => @msg} )
     end  
   end
 

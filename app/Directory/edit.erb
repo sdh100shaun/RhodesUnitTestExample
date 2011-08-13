@@ -1,0 +1,27 @@
+<div class="pageTitle">
+  <h1>Edit <%= @directory.department %></h1>
+</div>
+
+<div class="toolbar">
+  <div class="leftItem backButton">
+    <a href="<%= url_for :action => :show, :id => @directory.object %>">Cancel</a>
+  </div>
+  <div class="rightItem regularButton">
+    <a class="button" href="<%= url_for :action => :delete, :id => @directory.object %>">Delete</a>
+  </div>
+</div>
+
+<div class="content">
+  <form method="POST" action="<%= url_for :action => :update %>">
+    <input type="hidden" name="id" value="<%= @directory.object %>"/>
+    <ul>
+      
+          <li>
+            <label for="directory[department]" class="fieldLabel">Department</label>
+            <input type="text" name="directory[department]" value="<%= @directory.department %>" <%= placeholder( "Department" ) %> />
+          </li>
+      
+    </ul>
+    <input type="submit" class="standardButton" value="Update"/>
+  </form>
+</div>

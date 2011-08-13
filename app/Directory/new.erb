@@ -1,0 +1,25 @@
+<div class="pageTitle">
+  <h1>New <%= @directory.title %></h1>
+</div>
+
+<div class="toolbar">
+  <div class="leftItem backButton">
+    <a class="cancel" href="<%= url_for :action => :index %>">Cancel</a>
+  </div>
+</div>
+
+<div class="content">
+  <form method="POST" action="<%= url_for :action => :create %>">
+    <input type="hidden" name="id" value="<%= @directory.object %>"/>
+    <ul>
+      
+          <li>
+            <label for="directory[department]" class="fieldLabel">Department</label>
+            <input type="text" name="directory[department]" <%=
+            placeholder("Department") %> />
+          </li>
+      
+    </ul>
+    <input type="submit" class="standardButton" value="Create"/>
+  </form>
+</div>
